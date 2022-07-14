@@ -4,7 +4,7 @@
 
 <script src="{{ asset('resources/ckeditor/ckeditor.js') }}"></script>
 
-      <h2 class="mb-4"><i class="bi bi-person"> Edit Pages</i></h2>
+      <h2 class="mb-4"><span class="bi bi-person"> Edit Pages</span></h2>
         
       <form action="{{ route('editSitePage') }}" method="post">
         @csrf

@@ -4,13 +4,13 @@
 
         <style>.delete{color:#fff; background-color:tomato; border-radius:5px; padding:8px 12px; cursor: pointer;}.delete:hover{color:#fff;background-color:#f13d1d;}}</style>
 
-        <h2 class="mb-4"><i class="bi bi-person"> Users</i></h2>
+        <h2 class="mb-4"><span class="bi bi-person"> Users</span></h2>
 
         <form action="{{ route('searchUser') }}" method="post">
         @csrf
           <div class="form-group col-lg-8 mb-5">
             <input type="text" name="name" placeholder="search user">
-            <button type="submit" class="btn-primary"><i class="bi bi-search"></i></button>
+            <button type="submit" class="btn-primary"><span class="bi bi-search"></span></button>
           </div>
         </form>
         Users: 
@@ -38,7 +38,7 @@
             <tr>
               <td> {{ $user->name }} </td>
               <td> {{ $user->email }} </td>
-              <td><a href="{{ url('') }}/@<?= $user->littlelink_name ?>" target="_blank" class="text-info"><i class="bi bi-box-arrow-up-right"></i>&nbsp; {{ $user->littlelink_name }} </a></td>
+              <td><a href="{{ url('') }}/@<?= $user->littlelink_name ?>" target="_blank" class="text-info"><span class="bi bi-box-arrow-up-right"></span>&nbsp; {{ $user->littlelink_name }} </a></td>
               <td>{{ $user->role }}</td>
               <td><a href="{{ route('editUser', $user->id ) }}">Edit</a></td>
               <td><a href="{{ route('showLinksUser', $user->id ) }}" class="text-primary">View</a></td>
@@ -48,7 +48,7 @@
               @endif
               @endif
               <td>@if($user->find($user->id)->role == 'admin')-@else<a href="{{ route('blockUser', ['block' => $user->block, 'id' => $user->id] ) }}" class="text-danger">{{ $user->block }}</a>@endif</td>
-              <td>@if($user->find($user->id)->role == 'admin')<center>-</center>@else<center><a href="{{ route('deleteUser', ['id' => $user->id] ) }}" class="confirmation delete"><i class="bi bi-trash-fill del-icon"></i><span class="hide-mobile-del"></span></a></center>@endif</td>
+              <td>@if($user->find($user->id)->role == 'admin')<center>-</center>@else<center><a href="{{ route('deleteUser', ['id' => $user->id] ) }}" class="confirmation delete"><span class="bi bi-trash-fill del-icon"></span><span class="hide-mobile-del"></span></a></center>@endif</td>
             </tr>
             @endforeach
           </tbody>

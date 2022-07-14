@@ -4,7 +4,7 @@
 
 @if(env('ALLOW_USER_HTML') === true) <script src="{{ asset('resources/ckeditor/ckeditor.js') }}"></script> @endif
 
-        <h2 class="mb-4"><i class="bi bi-file-earmark-break"> Page</i></h2>
+        <h2 class="mb-4"><span class="bi bi-file-earmark-break"> Page</span></h2>
         
         @foreach($pages as $page)
         <form action="{{ route('editPage') }}" enctype="multipart/form-data" method="post">

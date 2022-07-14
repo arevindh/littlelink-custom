@@ -2,7 +2,7 @@
 
 @section('content')
 
-        <h2 class="mb-4"><i class="bi bi-brush"> Delete a theme</i></h2>
+        <h2 class="mb-4"><span class="bi bi-brush"> Delete a theme</span></h2>
 
         <form action="{{ route('deleteTheme') }}" enctype="multipart/form-data" method="post">
         @csrf

@@ -2,7 +2,7 @@
 
 @section('content')
 
-        <h2 class="mb-4"><i class="bi bi-person"> Profile</i></h2>
+        <h2 class="mb-4"><span class="bi bi-person"> Profile</span></h2>
 
         @foreach($profile as $profile)
 

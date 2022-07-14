@@ -12,14 +12,14 @@
         </p>
 
         <div class="mt-5 row">
-          <h5 class="mb-4" title="all links"><i class="bi bi-share-fill"> {{ $siteLinks }} </i></h5>
-          <h5 class="mb-4 ml-5" title="all clicks"><i class="bi bi-eye-fill"> {{ $siteClicks }} </i></h5>
-          <h5 class="mb-4 ml-5" title="all Users"><i class="bi bi bi-person-fill"> {{ $userNumber }}</i></h5>
+          <h5 class="mb-4" title="all links"><span class="bi bi-share-fill"> {{ $siteLinks }} </span></h5>
+          <h5 class="mb-4 ml-5" title="all clicks"><span class="bi bi-eye-fill"> {{ $siteClicks }} </span></h5>
+          <h5 class="mb-4 ml-5" title="all Users"><span class="bi bi bi-person-fill"> {{ $userNumber }}</span></h5>
         </div>
 
         <div class="mt-5 row">
-        <h5 class="mb-4"><i class="bi bi-link"> link: {{ $links }} </i></h5>
-          <h5 class="mb-4 ml-5"><i class="bi bi-eye"> click: {{ $clicks }} </i></h5>
+        <h5 class="mb-4"><span class="bi bi-link"> link: {{ $links }} </span></h5>
+          <h5 class="mb-4 ml-5"><span class="bi bi-eye"> click: {{ $clicks }} </span></h5>
         </div>
 
 @endsection

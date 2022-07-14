@@ -2,7 +2,7 @@
 
 @section('content')
 @foreach($pages as $page)
-        <h2 class="mb-4"><i class="bi bi-brush"> Select a theme</i></h2>
+        <h2 class="mb-4"><span class="bi bi-brush"> Select a theme</span></h2>
 
         <form action="{{ route('editTheme') }}" enctype="multipart/form-data" method="post">
         @csrf

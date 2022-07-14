@@ -2,7 +2,7 @@
 
 @section('content')
 
-        <h2 class="mb-4"><i class="bi bi-link-45deg"> Links</i></h2>
+        <h2 class="mb-4"><span class="bi "> Links</span></h2>
 
         <div style="overflow-y: auto;">
         <table class="table table-bordered">

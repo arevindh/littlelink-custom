@@ -11,8 +11,8 @@
 			Welcome to {{ config('app.name') }}!
         </p>
         <div class="mt-5 row">
-          <h5 class="mb-4"><i class="bi bi-link"> link: {{ $links }} </i></h5>
-          <h5 class="mb-4 ml-5"><i class="bi bi-eye"> click: {{ $clicks }} </i></h5>
+          <h5 class="mb-4"><span class="bi bi-link"> link: {{ $links }} </span></h5>
+          <h5 class="mb-4 ml-5"><span class="bi bi-eye"> click: {{ $clicks }} </span></h5>
         </div>
 
 @endsection

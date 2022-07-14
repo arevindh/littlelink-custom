@@ -155,7 +155,7 @@ var button_css = {
 <script src="https://kit.fontawesome.com/c4a5e06183.js" crossorigin="anonymous"></script>
 
 <div>
-<h2 class="mb-4"><i class="bi bi-pen"> Button Editor</i>
+<h2 class="mb-4"><span class="bi bi-pen"> Button Editor</span>
 
 <br><br><a class="btn btn-primary" href="{{ url('/studio/links') }}">⬅ Back</a>
 
@@ -257,7 +257,7 @@ NULL
         @elseif($custom_css != "" and $buttonId == 2)
         <center><div style="--delay: 1s" class="button-entrance"><div style="{{ $custom_css }}" class="button-custom_website button hvr-grow hvr-icon-wobble-vertical"><img class="wicon hvr-icon" src="http://www.google.com/s2/favicons?domain={{$link}}">{{ $title }}</div></div></center>
         @else
-        <center><div style="--delay: 1s" class="button-entrance"><div style="{{ $custom_css }}" class="button-demo hvr-grow hvr-icon-wobble-vertical"><i style="color: {{$custom_icon}}" class="icon hvr-icon fa {{$custom_icon}}"></i>{{ $title }}</div></div></center>
+        <center><div style="--delay: 1s" class="button-entrance"><div style="{{ $custom_css }}" class="button-demo hvr-grow hvr-icon-wobble-vertical"><span style="color: {{$custom_icon}}" class="icon hvr-icon fa {{$custom_icon}}"></span>{{ $title }}</div></div></center>
       @endif
       </div>
 </div>
@@ -299,25 +299,25 @@ NULL
         <tr>
             <td>Regular</td>
             <td></td>
-            <td><i class="fa fa-user"></i></td>
+            <td><span class="fa fa-user"></span></td>
             <td><p>fa-user</p></td>
           </tr>
           <tr>
             <td>Brands</td>
             <td>fab</td>
-            <td><i class="fab fa-github"></i></td>
+            <td><span class="fab fa-github"></span></td>
             <td><p>fab fa-github</p></td>
           </tr>
           <tr>
             <td>Color</td>
             <td>color_name;</td>
-            <td><i style="color: red;" class="fa fa-ghost"></i></td>
+            <td><span style="color: red;" class="fa fa-ghost"></span></td>
             <td><p style="color: red;">red; fa-ghost</p></td>
           </tr>
           <tr>
             <td>Color HEX</td>
             <td>color_HEX;</td>
-            <td><i style="color: #1DA1F2;" class="fab fa-twitter"></i></td>
+            <td><span style="color: #1DA1F2;" class="fab fa-twitter"></span></td>
             <td><p style="color: #1DA1F2;">#1DA1F2; fab fa-twitter</p></td>
           </tr>
         </tbody>

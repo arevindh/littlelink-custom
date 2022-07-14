@@ -2,7 +2,7 @@
 
 @section('content')
 
-      <h2 class="mb-4"><i class="bi bi-person"> Edit User</i></h2>
+      <h2 class="mb-4"><span class="bi bi-person"> Edit User</span></h2>
       @foreach($user as $user)
       <form action="{{ route('editUser', $user->id) }}" enctype="multipart/form-data" method="post">
         @csrf

@@ -11,7 +11,7 @@ echo "<meta http-equiv=\"refresh\" content=\"0; " . url()->current() . "/../../p
 
 
 @if(str_ends_with($_SERVER['REQUEST_URI'], 'advanced-config'))
-        <h2 class="mb-4"><i class="bi bi-pencil-square"> Advanced config</i></h2>
+        <h2 class="mb-4"><span class="bi bi-pencil-square"> Advanced config</span></h2>
           <p>Allows editing the frontend of your site. Amongst other things, this file allows customization of:<br> 
 Home Page, links, titles, Google Analytics and meta tags.</p>
         <form action="{{ route('editAC') }}" method="post">
@@ -33,7 +33,7 @@ Home Page, links, titles, Google Analytics and meta tags.</p>
           </script>
         </form>
 @elseif(str_ends_with($_SERVER['REQUEST_URI'], 'env'))
-        <h2 class="mb-4"><i class="bi bi-pencil-square"> ENV</i></h2>
+        <h2 class="mb-4"><span class="bi bi-pencil-square"> ENV</span></h2>
         
         <form action="{{ route('editENV') }}" method="post">
           @csrf

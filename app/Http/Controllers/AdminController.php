@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Schema;
+use Image;
 
 use Auth;
 use Exception;
@@ -201,7 +202,7 @@ class AdminController extends Controller
         User::where('id', $id)->update(['name' => $name, 'email' => $email, 'password' => $password, 'littlelink_name' => $littlelink_name, 'littlelink_description' => $littlelink_description, 'role' => $role]);
         }
         if(!empty($profilePhoto)){
-        $profilePhoto->move(base_path('/img'), $littlelink_name . ".png");
+            $profilePhoto->move(base_path('/img'), $littlelink_name . ".png");
         }
 
         return redirect('panel/users/all');
@@ -243,7 +244,14 @@ class AdminController extends Controller
         Page::first()->update(['home_message' => $message]);
 
         if(!empty($logo)){
-            $logo->move(base_path('/littlelink/images/'), "avatar.png");
+            
+            $imgFile = Image::make($logo->getRealPath());
+            $imgFile->resize(128, 128, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save(base_path('/littlelink/images/')."avatar.png");
+            $imgFile->resize(256, 256, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save(base_path('/littlelink/images/')."avatar@2x.png");
             }
 
         return back();

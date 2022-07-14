@@ -2,7 +2,7 @@
 
 @section('content')
 
-        <h2 class="mb-4"><i class="bi bi-pen"> Edit Link</i></h2>
+        <h2 class="mb-4"><span class="bi bi-pen"> Edit Link</span></h2>
 
         <form action="{{ route('editLink', $id) }}" method="post">
         @csrf
