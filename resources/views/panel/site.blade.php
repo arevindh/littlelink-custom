@@ -2,7 +2,7 @@
 
 @section('content')
 
-<script src="{{ asset('resources/ckeditor/ckeditor.js') }}"></script>
+<script src="{{ asset('/ckeditor/ckeditor.js') }}"></script>
 
       <h2 class="mb-4"><span class="bi bi-person"> Site</span></h2>
         

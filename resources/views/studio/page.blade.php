@@ -2,7 +2,7 @@
 
 @section('content')
 
-@if(env('ALLOW_USER_HTML') === true) <script src="{{ asset('resources/ckeditor/ckeditor.js') }}"></script> @endif
+@if(env('ALLOW_USER_HTML') === true) <script src="{{ asset('/ckeditor/ckeditor.js') }}"></script> @endif
 
         <h2 class="mb-4"><span class="bi bi-file-earmark-break"> Page</span></h2>
         
