@@ -107,7 +107,11 @@ class UserController extends Controller
             'button' => 'required'
         ]);
 
-        if (stringStartsWith($request->link,'http://') == 'true' or stringStartsWith($request->link,'https://') == 'true' or stringStartsWith($request->link,'mailto:') == 'true')
+        if ($request->button == 'phone')
+        $link1 = 'tel:' . $request->link;
+        elseif ($request->button == 'default email' or $request->button == 'default email_alt')
+        $link1 = 'mailto:' . $request->link;
+        elseif (stringStartsWith($request->link,'http://') == 'true' or stringStartsWith($request->link,'https://') == 'true')
         $link1 = $request->link;
         else
 		$link1 = 'https://' . $request->link;
